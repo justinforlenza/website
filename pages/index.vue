@@ -5,7 +5,7 @@
       <h1 class="title">
         jforlenza-portfolio
       </h1>
-      <h2 class="subtitle">
+      <h2 class="btn">
         My Personal Portfolio
       </h2>
       <div class="links">

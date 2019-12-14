@@ -2,11 +2,8 @@ const path = require('path')
 
 module.exports = {
   mode: 'universal',
-  /*
-  ** Headers of the page
-  */
   head: {
-    title: 'Justin Forlenza',
+    title: 'Justin Forlenza Portfolio',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -14,39 +11,33 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Montserrat' }
     ]
   },
-  /*
-  ** Customize the progress-bar color
-  */
   loading: { color: '#fff' },
-  /*
-  ** Global CSS
-  */
-  css: [
-  ],
-  /*
-  ** Plugins to load before mounting the App
-  */
-  plugins: [
-  ],
-  /*
-  ** Nuxt.js dev-modules
-  */
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
     '@nuxtjs/eslint-module',
     // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
     '@nuxtjs/tailwindcss'
   ],
-  /*
-  ** Nuxt.js modules
-  */
   modules: [
     '@nuxtjs/pwa',
     'nuxt-purgecss'
   ],
   purgeCSS: {},
+  pwa: {
+    manifest: {
+      name: 'Justin Forlenza Portfolio',
+      lang: 'en-us',
+      theme_color: '#ffffff',
+      background_color: '#ffffff'
+    }
+  },
+  router: {
+    linkActiveClass: 'active',
+    linkExactActiveClass: ''
+  },
   /*
   ** Build configuration
   */

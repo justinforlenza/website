@@ -2,6 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
-.btn {
-  @apply px-4 py-2 rounded font-semibold bg-gray-200 text-black;
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+header {
+  @apply bg-black text-white flex px-8;
+  @screen lg {
+    @apply px-16
+  }
+  @screen xl {
+    @apply px-64 !important
+  }
+}
+
+header > nav {
+  @apply flex-auto text-right p-5 uppercase hidden;
+  @screen md {
+    @apply block
+  }
+}
+header > nav > .separator {
+  @apply inline-block;
+  fill: #fff;
+  background: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg"><path d="M64.05 0h6.9L35.92 100h-6.9L64.05 0z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% 100%, auto;
+}
+header > nav > a {
+  @apply opacity-75;
+}
+header > nav > a:hover {
+  @apply opacity-50;
+}
+header > nav > a.active {
+  @apply opacity-100;
 }

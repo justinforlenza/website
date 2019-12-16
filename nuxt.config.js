@@ -23,6 +23,7 @@ module.exports = {
   ],
   modules: [
     '@nuxtjs/pwa',
+    '@nuxtjs/svg',
     'nuxt-purgecss'
   ],
   purgeCSS: {},

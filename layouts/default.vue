@@ -1,7 +1,8 @@
 <template>
   <div>
     <nav>
-      <h1>Justin Forlenza</h1>
+      <logo />
+      <span>Justin Forlenza</span>
       <div class="spacer" />
       <div class="navlinks">
         <div>
@@ -29,3 +30,13 @@
     <footer />
   </div>
 </template>
+
+<script>
+import logo from '~/assets/svg/logo/icon.svg?inline'
+
+export default {
+  components: {
+    logo
+  }
+}
+</script>

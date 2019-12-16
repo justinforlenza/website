@@ -1,8 +1,5 @@
 <template>
-  <div>
-    <h1>Index</h1>
-    <nuxt />
-  </div>
+  <h1>Contact</h1>
 </template>
 
 <script>

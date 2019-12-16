@@ -6,8 +6,8 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
-header {
-  @apply bg-black text-white flex px-8;
+nav {
+  @apply bg-black text-white flex px-8 h-16 sticky top-0;
   @screen lg {
     @apply px-16
   }
@@ -16,26 +16,32 @@ header {
   }
 }
 
-header > nav {
-  @apply flex-auto text-right p-5 uppercase hidden;
+main {
+  @apply min-h-screen
+}
+
+.spacer {
+  @apply flex flex-grow
+}
+
+nav > div.navlinks {
+  @apply hidden uppercase text-xl h-16 items-center font-medium;
   @screen md {
-    @apply block
+    @apply flex flex-no-wrap
   }
 }
-header > nav > .separator {
-  @apply inline-block;
-  fill: #fff;
-  background: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg"><path d="M64.05 0h6.9L35.92 100h-6.9L64.05 0z"/></svg>');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 100% 100%, auto;
+
+div.navlinks > .seperator::before {
+  @apply text-3xl px-2 font-light;
+  content: "/"
 }
-header > nav > a {
-  @apply opacity-75;
-}
-header > nav > a:hover {
+
+nav a {
   @apply opacity-50;
 }
-header > nav > a.active {
+nav a:hover {
+  @apply opacity-75;
+}
+nav a.active {
   @apply opacity-100;
 }

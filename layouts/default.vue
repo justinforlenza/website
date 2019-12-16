@@ -1,21 +1,29 @@
 <template>
   <div>
-    <header>
+    <nav>
       <h1>Justin Forlenza</h1>
-      <nav>
-        <nuxt-link to="/">
-          About
-        </nuxt-link>
-        <div class="separator" />
-        <nuxt-link to="/projects">
-          Projects
-        </nuxt-link> /
-        <nuxt-link to="/contact">
-          Contact
-        </nuxt-link>
-      </nav>
-    </header>
-    <main class="container">
+      <div class="spacer" />
+      <div class="navlinks">
+        <div>
+          <nuxt-link to="/" exact>
+            About
+          </nuxt-link>
+        </div>
+        <div class="seperator" />
+        <div>
+          <nuxt-link to="/projects">
+            Projects
+          </nuxt-link>
+        </div>
+        <div class="seperator" />
+        <div>
+          <nuxt-link to="/contact">
+            Contact
+          </nuxt-link>
+        </div>
+      </div>
+    </nav>
+    <main>
       <nuxt />
     </main>
     <footer />

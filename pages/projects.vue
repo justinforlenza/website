@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Index</h1>
+    <h1>Projects</h1>
     <nuxt-child />
   </div>
 </template>

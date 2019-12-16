@@ -1,5 +1,6 @@
 'use strict'
 const path = require('path')
+const fs = require('fs')
 const consola = require('consola')
 const feathers = require('@feathersjs/feathers')
 const express = require('@feathersjs/express')
@@ -8,6 +9,12 @@ process.env.NODE_CONFIG_DIR = path.join(__dirname, 'config/')
 
 async function start () {
   const app = express(feathers())
+
+  app.get('/resume', (req, res) => {
+    const file = fs.readFileSync('./server/assets/resume.pdf')
+    res.setHeader('Content-Type', 'application/pdf')
+    res.send(file)
+  })
 
   const { Nuxt, Builder } = require('nuxt')
 

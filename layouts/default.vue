@@ -40,3 +40,55 @@ export default {
   }
 }
 </script>
+
+<style lang="postcss" scoped>
+nav {
+  @apply bg-black text-white flex px-8 h-16 sticky top-0 items-center shadow-lg z-50;
+  opacity: .8;
+  @screen lg {
+    @apply px-16
+  }
+  @screen xl {
+    @apply px-64 !important
+  }
+}
+
+nav > svg {
+  @apply h-12;
+  fill: white !important;
+}
+
+nav > span {
+  @apply ml-2 text-lg font-medium select-none hidden;
+}
+
+main {
+  @apply min-h-screen text-gray-900 -mt-16 bg-gray-200;
+  perspective: 2px;
+}
+.spacer {
+  @apply flex flex-grow
+}
+
+nav > div.navlinks {
+  @apply hidden uppercase text-xl h-16 items-center font-medium;
+  @screen md {
+    @apply flex flex-no-wrap
+  }
+}
+
+div.navlinks > .seperator::before {
+  @apply text-3xl px-2 font-light;
+  content: "/"
+}
+
+nav a {
+  @apply opacity-50 select-none;
+}
+nav a:hover {
+  @apply opacity-75;
+}
+nav a.active {
+  @apply opacity-100;
+}
+</style>

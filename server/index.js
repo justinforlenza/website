@@ -13,6 +13,7 @@ async function start () {
   app.get('/resume', (req, res) => {
     const file = fs.readFileSync('./server/assets/resume.pdf')
     res.setHeader('Content-Type', 'application/pdf')
+    res.setHeader('Content-Disposition', 'filename=Justin Forlenza Resume.pdf')
     res.send(file)
   })
 

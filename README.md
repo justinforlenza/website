@@ -1,22 +1,5 @@
-# jforlenza-portfolio
+# Justin Forlenza Portfolio
 
-> My Personal Portfolio
+My personal porfolio powered by [Nuxt.js](https://nuxtjs.org), [Feathers.js](https://feathersjs.com/) & [Tailwind CSS](https://tailwindcss.com/)
 
-## Build Setup
 
-``` bash
-# install dependencies
-$ yarn install
-
-# serve with hot reload at localhost:3000
-$ yarn dev
-
-# build for production and launch server
-$ yarn build
-$ yarn start
-
-# generate static project
-$ yarn generate
-```
-
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).

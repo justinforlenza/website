@@ -16,11 +16,11 @@
             Projects
           </nuxt-link>
         </div>
-        <div class="seperator" />
+        <!-- <div class="seperator" /> -->
         <div>
-          <nuxt-link to="/contact">
+          <button>
             Contact
-          </nuxt-link>
+          </button>
         </div>
       </div>
     </nav>
@@ -51,6 +51,15 @@ nav {
   @screen xl {
     @apply px-64 !important
   }
+  button {
+    @apply p-2 border-white border-2 select-none text-center uppercase ml-3;
+  }
+  button:active {
+    @apply bg-white text-black;
+  }
+  button:focus {
+    @apply outline-none
+  }
 }
 
 nav > svg {
@@ -64,7 +73,6 @@ nav > span {
 
 main {
   @apply min-h-screen text-gray-900 -mt-16 bg-gray-200;
-  perspective: 2px;
 }
 .spacer {
   @apply flex flex-grow

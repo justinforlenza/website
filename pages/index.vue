@@ -12,14 +12,6 @@
         <div />
       </div>
     </div>
-    <!-- <section id="about">
-      <div class="title">
-        About
-      </div>
-      <div class="details" />
-    </section>
-    <section id="experience" />
-    <section id="education" /> -->
     <nuxt-child />
   </div>
 </template>

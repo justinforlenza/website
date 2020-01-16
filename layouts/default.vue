@@ -52,7 +52,7 @@ nav {
     @apply px-64 !important
   }
   button {
-    @apply p-2 border-white border-2 select-none text-center uppercase ml-3;
+    @apply p-2 border-white border-2 select-none text-center uppercase ml-5 text-base;
   }
   button:active {
     @apply bg-white text-black;

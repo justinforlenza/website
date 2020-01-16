@@ -1,0 +1,7 @@
+{
+  "files.exclude": {
+    ".nuxt": true,
+    ".idea": true,
+    ".vscode": true
+  }
+}

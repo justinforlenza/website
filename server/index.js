@@ -23,6 +23,7 @@ async function start () {
   const config = require('../nuxt.config.js')
   config.rootDir = path.resolve(__dirname, '..')
   config.dev = process.env.NODE_ENV !== 'production'
+  // config.
 
   const nuxt = new Nuxt(config)
   if (config.dev) {

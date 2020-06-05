@@ -90,4 +90,4 @@ sw.*
 *.swp
 
 cloud_sql_proxy.exe
-/serviceAccount.json
+serviceAccount.json

@@ -12,7 +12,24 @@ README.md
 # from your .gitignore file, remove the corresponding line
 # below:
 .git
+.idea
 .gitignore
+
+.vscode
+.editorconfig
+
+jsconfig.json
+.eslintrc.js
+
+cloud_sql_proxy.exe
+serviceAccount.json
+.env
 
 # Node.js dependencies:
 node_modules/
+
+
+# Source Code
+pages/
+layouts/
+

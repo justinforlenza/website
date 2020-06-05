@@ -2,13 +2,37 @@
 const path = require('path')
 const fs = require('fs')
 const consola = require('consola')
-const feathers = require('@feathersjs/feathers')
-const express = require('@feathersjs/express')
+const express = require('express')
+const mysql = require('mysql')
 
 process.env.NODE_CONFIG_DIR = path.join(__dirname, 'config/')
+let pool = null
+
+if (process.env.NODE_ENV === 'production') {
+  pool = mysql.createPool({
+    user: 'portfolio',
+    password: process.env.DB_PASS,
+    database: 'justinforlenza',
+    socketPath: '/cloudsql/justinforlenza:us-east1:silvanus'
+  })
+} else {
+  pool = mysql.createPool({
+    user: 'portfolio',
+    password: process.env.DB_PASS,
+    database: 'justinforlenza',
+    host: '127.0.0.1',
+    port: '3306'
+  })
+}
 
 async function start () {
-  const app = express(feathers())
+  const app = express()
+
+  app.get('/api/projects', async (req, res) => {
+    await pool.query('CALL get_projects', (error, results) => {
+      if (error) { res.status(500).send(error) } else { res.send(results[0]) }
+    })
+  })
 
   app.get('/resume', (req, res) => {
     const file = fs.readFileSync('./server/assets/resume.pdf')
@@ -23,7 +47,6 @@ async function start () {
   const config = require('../nuxt.config.js')
   config.rootDir = path.resolve(__dirname, '..')
   config.dev = process.env.NODE_ENV !== 'production'
-  // config.
 
   const nuxt = new Nuxt(config)
   if (config.dev) {
@@ -33,11 +56,9 @@ async function start () {
     await nuxt.ready()
   }
 
-  const configuration = require('@feathersjs/configuration')
-  app.configure(configuration()).use(nuxt.render)
+  app.use(nuxt.render)
 
-  const host = app.get('host')
-  const port = app.get('port')
+  const { host, port } = nuxt.options.server
 
   app.listen(port)
 

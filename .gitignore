@@ -88,3 +88,6 @@ sw.*
 
 # Vim swap files
 *.swp
+
+cloud_sql_proxy.exe
+/serviceAccount.json

@@ -43,6 +43,7 @@ export default {
 
 <style lang="postcss" scoped>
 nav {
+  transition: padding 0.2s linear;
   @apply bg-black text-white flex px-8 h-16 sticky top-0 items-center shadow-lg z-50;
   opacity: .8;
   @screen lg {

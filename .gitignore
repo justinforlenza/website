@@ -92,3 +92,4 @@ sw.*
 cloud_sql_proxy.exe
 serviceAccount.json
 /env_variables.yaml
+/.vscode/tasks.json

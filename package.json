@@ -13,6 +13,7 @@
     "sql-proxy": "./cloud_sql_proxy -instances=justinforlenza:us-east1:silvanus:=tcp:3306 -credential_file=serviceAccount.json"
   },
   "dependencies": {
+    "@nuxt/http": "^0.5.2",
     "@nuxtjs/eslint-module": "^1.0.0",
     "@nuxtjs/pwa": "^3.0.0-0",
     "@nuxtjs/svg": "^0.1.6",

@@ -14,6 +14,9 @@ module.exports = {
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Montserrat:300,500,700&display=swap' }
     ]
   },
+  env: {
+    baseUrl: process.env.BASE_URL || 'http://localhost:3000'
+  },
   loading: { color: '#fff' },
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
@@ -24,6 +27,7 @@ module.exports = {
   modules: [
     '@nuxtjs/pwa',
     '@nuxtjs/svg',
+    '@nuxt/http',
     'nuxt-purgecss'
   ],
   purgeCSS: {},
@@ -38,6 +42,9 @@ module.exports = {
   router: {
     linkActiveClass: 'active',
     linkExactActiveClass: ''
+  },
+  http: {
+    browserBaseURL: process.env.NODE_ENV === 'production' ? 'https://justinforle.nz' : 'http://localhost:3000'
   },
   /*
   ** Build configuration
